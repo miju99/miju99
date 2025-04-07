@@ -22,4 +22,4 @@
 
 #### I'm not good yet, but I'll study hard! Thank you!:D
 
-[View Calendar](https://miju99.github.io/Test/)
+[View Calendar](https://github.com/miju99/Test/blob/main/index.html)
