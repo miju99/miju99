@@ -1,0 +1,30 @@
+<svg viewBox="0 0 1800 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <rect width="1800" height="200" fill="#E0F7FA" />
+
+  <g>
+    <!-- 같은 구름 두 번 반복 -->
+    <path
+      id="cloud"
+      d="
+        M0 150
+        C 100 180, 150 100, 250 130
+        C 300 80, 400 80, 450 120
+        C 500 70, 600 100, 650 140
+        C 700 100, 800 130, 900 110
+        L 900 200
+        L 0 200
+        Z
+      "
+      fill="#ffffff" opacity="0.95" />
+
+    <use xlink:href="#cloud" x="900" />
+
+    <!-- 전체 그룹을 이동시킴 -->
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="0 0; -900 0"
+      dur="20s"
+      repeatCount="indefinite" />
+  </g>
+</svg>
