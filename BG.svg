@@ -1,49 +1,44 @@
 <svg viewBox="0 0 1800 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" style="display:block; margin:auto;">
 
-  <!-- 1. 그라데이션 정의 -->
+  <!-- 그라데이션 정의 -->
   <defs>
-      <linearGradient id="dayToNight" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#B3E5FC" />
-        <stop offset="40%" stop-color="#B3E5FC" />
-        <stop offset="50%" stop-color="#8CA2C9" />
-        <stop offset="60%" stop-color="#58698E" />
-        <stop offset="70%" stop-color="#3C446C" />
-        <stop offset="80%" stop-color="#212A4E" />
-        <stop offset="100%" stop-color="#0A0F3C" />
-      </linearGradient>
-    </defs>
+    <linearGradient id="dayToNight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B3E5FC" />
+      <stop offset="40%" stop-color="#B3E5FC" />
+      <stop offset="50%" stop-color="#8CA2C9" />
+      <stop offset="60%" stop-color="#58698E" />
+      <stop offset="70%" stop-color="#3C446C" />
+      <stop offset="80%" stop-color="#212A4E" />
+      <stop offset="100%" stop-color="#0A0F3C" />
+    </linearGradient>
+  </defs>
 
-
-  <!-- 2. 배경 rect 한 개로 교체 -->
+  <!-- 배경 -->
   <rect width="1800" height="200" fill="url(#dayToNight)" />
 
-  <!-- 구름 5개 그룹 전체 -->
+  <!-- 구름 10개 (기존 5개 + 복사 5개) -->
   <g id="clouds" fill="#fff" opacity="0.9">
+    <!-- 기존 구름 5개 -->
     <path d="M0 150 C100 180, 150 100, 250 130 C300 80, 400 80, 450 120 L450 200 L0 200 Z" />
     <path d="M450 150 C550 180, 600 100, 700 130 C750 80, 850 80, 900 120 L900 200 L450 200 Z" />
     <path d="M900 150 C1000 180, 1050 100, 1150 130 C1200 80, 1300 80, 1350 120 L1350 200 L900 200 Z" />
     <path d="M1350 150 C1450 180, 1500 100, 1600 130 C1650 80, 1750 80, 1800 120 L1800 200 L1350 200 Z" />
     <path d="M1800 150 C1900 180, 1950 100, 2050 130 C2100 80, 2200 80, 2250 120 L2250 200 L1800 200 Z" />
+    <!-- 복사한 구름 5개 (오른쪽으로 1800px 이동) -->
+    <path d="M1800 150 C1900 180, 1950 100, 2050 130 C2100 80, 2200 80, 2250 120 L2250 200 L1800 200 Z" />
+    <path d="M2250 150 C2350 180, 2400 100, 2500 130 C2550 80, 2650 80, 2700 120 L2700 200 L2250 200 Z" />
+    <path d="M2700 150 C2800 180, 2850 100, 2950 130 C3000 80, 3100 80, 3150 120 L3150 200 L2700 200 Z" />
+    <path d="M3150 150 C3250 180, 3300 100, 3400 130 C3450 80, 3550 80, 3600 120 L3600 200 L3150 200 Z" />
+    <path d="M3600 150 C3700 180, 3750 100, 3850 130 C3900 80, 4000 80, 4050 120 L4050 200 L3600 200 Z" />
   </g>
 
-  <!-- 낮 새 (더 아래로) -->
+  <!-- 낮 새 -->
   <g id="birds" fill="#444" stroke="#222" stroke-width="1">
     <path d="M0 0 Q10 -10 20 0 Q10 -5 0 0 Z" />
     <path d="M30 10 Q40 0 50 10 Q40 5 30 10 Z" />
   </g>
 
-  <style>
-  #birds {
-    animation: flyBirds 20s linear infinite;
-  }
-  @keyframes flyBirds {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(200px); }
-    100% { transform: translateX(400px); }
-  }
-  </style>
-  
-  <!-- 밤 별들 (더 많이, 간격 넓게) -->
+  <!-- 밤 별들 -->
   <g id="stars" fill="#fff" opacity="0.8" transform="translate(1200,50)">
     <circle cx="0" cy="0" r="3" />
     <circle cx="40" cy="20" r="2" />
@@ -60,13 +55,13 @@
   </g>
 
   <style>
+    /* 구름 애니메이션: 2배 거리로 자연스러운 루프 */
     #clouds {
       animation: moveClouds 60s linear infinite;
     }
     @keyframes moveClouds {
       0% { transform: translateX(0); }
-      80% { transform: translateX(-1440px); }
-      100% { transform: translateX(-1800px); }
+      100% { transform: translateX(-2250px); }
     }
 
     /* 새가 왼쪽에서 오른쪽으로 날아감 */
@@ -103,4 +98,5 @@
       50% { opacity: 0.2; r: 1.5; }
     }
   </style>
+
 </svg>
