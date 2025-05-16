@@ -1,32 +1,93 @@
-<svg viewBox="0 0 2250 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+<svg viewBox="0 0 1800 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" style="display:block; margin:auto;">
 
-  <!-- 낮 배경 -->
-  <rect width="1125" height="200" fill="#B3E5FC" />
-  <!-- 밤 배경 -->
-  <rect x="1125" width="1125" height="200" fill="#0A0F3C" />
+  <!-- 배경 -->
+  <rect width="900" height="200" fill="#B3E5FC" />   <!-- 낮 배경 -->
+  <rect x="900" width="900" height="200" fill="#0A0F3C" /> <!-- 밤 배경 -->
 
-  <!-- 낮 구름 6개 연결 (0 ~ 1350 위치) -->
-  <g fill="#fff" opacity="0.9" id="day-clouds" transform="translate(0,0)">
+  <!-- 구름 5개 그룹 전체 -->
+  <g id="clouds" fill="#fff" opacity="0.9">
     <path d="M0 150 C100 180, 150 100, 250 130 C300 80, 400 80, 450 120 L450 200 L0 200 Z" />
     <path d="M450 150 C550 180, 600 100, 700 130 C750 80, 850 80, 900 120 L900 200 L450 200 Z" />
     <path d="M900 150 C1000 180, 1050 100, 1150 130 C1200 80, 1300 80, 1350 120 L1350 200 L900 200 Z" />
     <path d="M1350 150 C1450 180, 1500 100, 1600 130 C1650 80, 1750 80, 1800 120 L1800 200 L1350 200 Z" />
     <path d="M1800 150 C1900 180, 1950 100, 2050 130 C2100 80, 2200 80, 2250 120 L2250 200 L1800 200 Z" />
-    <path d="M2250 150 C2350 180, 2400 100, 2500 130 C2550 80, 2650 80, 2700 120 L2700 200 L2250 200 Z" />
-    <animateTransform attributeName="transform" type="translate" values="0 0; -1350 0" dur="60s" repeatCount="indefinite" />
   </g>
 
-  <!-- 밤 구름 6개 연결 (밤 배경 시작 위치 + 낮 구름 마지막 구름 위치부터) -->
-  <g fill="#ccddee" opacity="0.85" id="night-clouds" transform="translate(1125,0)">
-    <path d="M0 150 C100 180, 150 100, 250 130 C300 80, 400 80, 450 120 L450 200 L0 200 Z" />
-    <path d="M450 150 C550 180, 600 100, 700 130 C750 80, 850 80, 900 120 L900 200 L450 200 Z" />
-    <path d="M900 150 C1000 180, 1050 100, 1150 130 C1200 80, 1300 80, 1350 120 L1350 200 L900 200 Z" />
-    <path d="M1350 150 C1450 180, 1500 100, 1600 130 C1650 80, 1750 80, 1800 120 L1800 200 L1350 200 Z" />
-    <path d="M1800 150 C1900 180, 1950 100, 2050 130 C2100 80, 2200 80, 2250 120 L2250 200 L1800 200 Z" />
-    <path d="M2250 150 C2350 180, 2400 100, 2500 130 C2550 80, 2650 80, 2700 120 L2700 200 L2250 200 Z" />
-    <animateTransform attributeName="transform" type="translate" values="0 0; -1350 0" dur="60s" repeatCount="indefinite" />
+  <!-- 낮 새 (더 아래로) -->
+  <g id="birds" fill="#444" stroke="#222" stroke-width="1">
+    <path d="M0 0 Q10 -10 20 0 Q10 -5 0 0 Z" />
+    <path d="M30 10 Q40 0 50 10 Q40 5 30 10 Z" />
   </g>
 
-  <!-- 낮과 밤 새, 별 등 기존 구성은 그대로 추가 -->
+  <style>
+  #birds {
+    animation: flyBirds 20s linear infinite;
+  }
+  @keyframes flyBirds {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(200px); }
+    100% { transform: translateX(400px); }
+  }
+</style>
+  
+  <!-- 밤 별들 (더 많이, 간격 넓게) -->
+  <g id="stars" fill="#fff" opacity="0.8" transform="translate(1200,50)">
+    <circle cx="0" cy="0" r="3" />
+    <circle cx="40" cy="20" r="2" />
+    <circle cx="80" cy="40" r="2.5" />
+    <circle cx="120" cy="10" r="1.8" />
+    <circle cx="160" cy="30" r="2" />
+    <circle cx="200" cy="5" r="2.2" />
+    <circle cx="240" cy="25" r="1.6" />
+    <circle cx="280" cy="45" r="2.4" />
+    <circle cx="320" cy="15" r="1.7" />
+    <circle cx="360" cy="35" r="2.3" />
+    <circle cx="400" cy="20" r="2.1" />
+    <circle cx="440" cy="40" r="1.9" />
+  </g>
 
+  <style>
+    #clouds {
+      animation: moveClouds 60s linear infinite;
+    }
+    @keyframes moveClouds {
+      0% { transform: translateX(0); }
+      80% { transform: translateX(-1440px); }
+      100% { transform: translateX(-1800px); }
+    }
+
+    /* 새가 왼쪽에서 오른쪽으로 날아감 */
+    #birds {
+      transform: translateY(200px);
+      animation: flyBirds 20s linear infinite;
+    }
+    @keyframes flyBirds {
+      0% { transform: translateX(0) translateY(100px); }
+      50% { transform: translateX(200px) translateY(80px); }
+      100% { transform: translateX(400px) translateY(100px); }
+    }
+
+    /* 별 반짝임 */
+    #stars circle {
+      animation: twinkle 3s ease-in-out infinite;
+      transform-origin: center;
+    }
+    #stars circle:nth-child(1) { animation-delay: 0s; }
+    #stars circle:nth-child(2) { animation-delay: 0.4s; }
+    #stars circle:nth-child(3) { animation-delay: 0.8s; }
+    #stars circle:nth-child(4) { animation-delay: 1.2s; }
+    #stars circle:nth-child(5) { animation-delay: 1.6s; }
+    #stars circle:nth-child(6) { animation-delay: 2.0s; }
+    #stars circle:nth-child(7) { animation-delay: 2.4s; }
+    #stars circle:nth-child(8) { animation-delay: 2.8s; }
+    #stars circle:nth-child(9) { animation-delay: 3.2s; }
+    #stars circle:nth-child(10) { animation-delay: 3.6s; }
+    #stars circle:nth-child(11) { animation-delay: 4.0s; }
+    #stars circle:nth-child(12) { animation-delay: 4.4s; }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.8; r: 3; }
+      50% { opacity: 0.2; r: 1.5; }
+    }
+  </style>
 </svg>
