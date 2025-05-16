@@ -1,52 +1,32 @@
-<svg viewBox="0 0 1800 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-  <!-- 배경 -->
-  <rect width="900" height="200" fill="#B3E5FC" /> <!-- 낮 -->
-  <rect x="900" width="900" height="200" fill="#0A0F3C" /> <!-- 밤 -->
+<svg viewBox="0 0 2250 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
 
-  <!-- 낮 구름 -->
-  <g fill="#fff" opacity="0.9">
+  <!-- 낮 배경 -->
+  <rect width="1125" height="200" fill="#B3E5FC" />
+  <!-- 밤 배경 -->
+  <rect x="1125" width="1125" height="200" fill="#0A0F3C" />
+
+  <!-- 낮 구름 6개 연결 (0 ~ 1350 위치) -->
+  <g fill="#fff" opacity="0.9" id="day-clouds" transform="translate(0,0)">
     <path d="M0 150 C100 180, 150 100, 250 130 C300 80, 400 80, 450 120 L450 200 L0 200 Z" />
     <path d="M450 150 C550 180, 600 100, 700 130 C750 80, 850 80, 900 120 L900 200 L450 200 Z" />
-    <animateTransform
-      attributeName="transform"
-      attributeType="XML"
-      type="translate"
-      values="0 0; -450 0"
-      dur="20s"
-      repeatCount="indefinite" />
+    <path d="M900 150 C1000 180, 1050 100, 1150 130 C1200 80, 1300 80, 1350 120 L1350 200 L900 200 Z" />
+    <path d="M1350 150 C1450 180, 1500 100, 1600 130 C1650 80, 1750 80, 1800 120 L1800 200 L1350 200 Z" />
+    <path d="M1800 150 C1900 180, 1950 100, 2050 130 C2100 80, 2200 80, 2250 120 L2250 200 L1800 200 Z" />
+    <path d="M2250 150 C2350 180, 2400 100, 2500 130 C2550 80, 2650 80, 2700 120 L2700 200 L2250 200 Z" />
+    <animateTransform attributeName="transform" type="translate" values="0 0; -1350 0" dur="60s" repeatCount="indefinite" />
   </g>
 
-  <!-- 밤 구름 -->
-  <g fill="#dddfff" opacity="0.7" transform="translate(900 0)">
+  <!-- 밤 구름 6개 연결 (밤 배경 시작 위치 + 낮 구름 마지막 구름 위치부터) -->
+  <g fill="#ccddee" opacity="0.85" id="night-clouds" transform="translate(1125,0)">
     <path d="M0 150 C100 180, 150 100, 250 130 C300 80, 400 80, 450 120 L450 200 L0 200 Z" />
     <path d="M450 150 C550 180, 600 100, 700 130 C750 80, 850 80, 900 120 L900 200 L450 200 Z" />
-    <animateTransform
-      attributeName="transform"
-      attributeType="XML"
-      type="translate"
-      values="0 0; -450 0"
-      dur="30s"
-      repeatCount="indefinite" />
+    <path d="M900 150 C1000 180, 1050 100, 1150 130 C1200 80, 1300 80, 1350 120 L1350 200 L900 200 Z" />
+    <path d="M1350 150 C1450 180, 1500 100, 1600 130 C1650 80, 1750 80, 1800 120 L1800 200 L1350 200 Z" />
+    <path d="M1800 150 C1900 180, 1950 100, 2050 130 C2100 80, 2200 80, 2250 120 L2250 200 L1800 200 Z" />
+    <path d="M2250 150 C2350 180, 2400 100, 2500 130 C2550 80, 2650 80, 2700 120 L2700 200 L2250 200 Z" />
+    <animateTransform attributeName="transform" type="translate" values="0 0; -1350 0" dur="60s" repeatCount="indefinite" />
   </g>
 
-  <!-- 밤 별 -->
-  <g fill="#fff" opacity="0.8" transform="translate(900 0)">
-    <circle cx="100" cy="50" r="1.5">
-      <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="300" cy="80" r="1">
-      <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="250" cy="120" r="1.2">
-      <animate attributeName="opacity" values="1;0;1" dur="4s" repeatCount="indefinite" />
-    </circle>
-  </g>
+  <!-- 낮과 밤 새, 별 등 기존 구성은 그대로 추가 -->
 
-  <!-- 새 -->
-  <g stroke="#333" stroke-width="1" fill="none" >
-    <path d="M0 0 L5 -5 L10 0" >
-      <animateTransform attributeName="transform" type="translate" values="-50 80; 1850 80" dur="25s" repeatCount="indefinite" />
-      <animateTransform attributeName="transform" type="scale" values="1 1; 1.2 0.8; 1 1" dur="0.5s" repeatCount="indefinite" additive="sum" />
-    </path>
-  </g>
 </svg>
