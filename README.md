@@ -14,4 +14,4 @@
 
 #### I'm not good yet, but I'll study hard! Thank you!:D
 
-<img src = "https://github.com/miju99/miju99/blob/main/Star.svg"/>
+<img src = "[https://github.com/miju99/miju99/blob/main/Star.svg](https://github.com/miju99/miju99/blob/main/Cloud.svg)"/>
