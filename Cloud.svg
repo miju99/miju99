@@ -1,0 +1,26 @@
+<!-- 깃허브 README에서는 직접 embed 불가능하니 아래 SVG를 파일로 저장하고 <img src="...">로 사용하세요! -->
+<svg viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <rect width="900" height="200" fill="#E0F7FA" />
+  <g id="cloudwave" fill="#FFFFFF" opacity="0.9">
+    <path d="
+      M 0 100
+      C 50 80, 100 120, 150 100
+      C 200 80, 250 120, 300 100
+      C 350 80, 400 120, 450 100
+      C 500 80, 550 120, 600 100
+      C 650 80, 700 120, 750 100
+      C 800 80, 850 120, 900 100
+      L 900 200
+      L 0 200
+      Z
+    " />
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="translate"
+      values="0 0; 15 0; 0 0"
+      dur="6s"
+      repeatCount="indefinite"
+    />
+  </g>
+</svg>
