@@ -1,0 +1,41 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="900" height="600" fill="#ffffff" />
+  <g fill="#DDF6D2">
+    <path d="M0 -86.8L19.5 -26.8L82.6 -26.8L31.5 10.2L51 70.2L0 33.2L-51 70.2L-31.5 10.2L-82.6 -26.8L-19.5 -26.8Z" transform="translate(605 505)">
+      <animateTransform attributeName="transform" type="translate" values="605 505; 615 495; 605 505" dur="4s" repeatCount="indefinite" />
+    </path>
+    <path d="M0 -27.4L6.1 -8.5L26 -8.5L9.9 3.2L16.1 22.1L0 10.5L-16.1 22.1L-9.9 3.2L-26 -8.5L-6.1 -8.5Z" transform="translate(797 247)">
+      <animateTransform attributeName="transform" type="translate" values="797 247; 807 255; 797 247" dur="3.5s" repeatCount="indefinite" />
+    </path>
+    <path d="M0 -53.8L12.1 -16.6L51.2 -16.6L19.5 6.4L31.6 43.5L0 20.5L-31.6 43.5L-19.5 6.4L-51.2 -16.6L-12.1 -16.6Z" transform="translate(407 537)">
+      <animateTransform attributeName="transform" type="translate" values="407 537; 417 545; 407 537" dur="5s" repeatCount="indefinite" />
+    </path>
+    <path d="M0 -66.1L14.8 -20.4L62.8 -20.4L24 7.8L38.8 53.5L0 25.2L-38.8 53.5L-24 7.8L-62.8 -20.4L-14.8 -20.4Z" transform="translate(378 258)">
+      <animateTransform attributeName="transform" type="translate" values="378 258; 368 248; 378 258" dur="3.8s" repeatCount="indefinite" />
+    </path>
+    <path d="M0 -55.7L12.5 -17.2L53 -17.2L20.2 6.6L32.7 45.1L0 21.3L-32.7 45.1L-20.2 6.6L-53 -17.2L-12.5 -17.2Z" transform="translate(182 447)">
+      <animateTransform attributeName="transform" type="translate" values="182 447; 192 440; 182 447" dur="4.2s" repeatCount="indefinite" />
+    </path>
+    <path d="M0 -62.3L14 -19.2L59.2 -19.2L22.6 7.4L36.6 50.4L0 23.8L-36.6 50.4L-22.6 7.4L-59.2 -19.2L-14 -19.2Z" transform="translate(115 184)">
+      <animateTransform attributeName="transform" type="translate" values="115 184; 105 174; 115 184" dur="4.5s" repeatCount="indefinite" />
+    </path>
+    <path d="M0 -42.5L9.5 -13.1L40.4 -13.1L15.4 5L25 34.4L0 16.2L-25 34.4L-15.4 5L-40.4 -13.1L-9.5 -13.1Z" transform="translate(524 38)">
+      <animateTransform attributeName="transform" type="translate" values="524 38; 534 45; 524 38" dur="3.9s" repeatCount="indefinite" />
+    </path>
+    <path d="M0 -84L18.9 -26L79.9 -26L30.5 9.9L49.4 68L0 32.1L-49.4 68L-30.5 9.9L-79.9 -26L-18.9 -26Z" transform="translate(774 10)">
+      <animateTransform attributeName="transform" type="translate" values="774 10; 784 0; 774 10" dur="4.8s" repeatCount="indefinite" />
+    </path>
+    <path d="M0 -45.3L10.2 -14L43.1 -14L16.5 5.3L26.6 36.7L0 17.3L-26.6 36.7L-16.5 5.3L-43.1 -14L-10.2 -14Z" transform="translate(803 526)">
+      <animateTransform attributeName="transform" type="translate" values="803 526; 793 536; 803 526" dur="4.1s" repeatCount="indefinite" />
+    </path>
+    <path d="M0 -34L7.6 -10.5L32.3 -10.5L12.3 4L20 27.5L0 13L-20 27.5L-12.3 4L-32.3 -10.5L-7.6 -10.5Z" transform="translate(562 248)">
+      <animateTransform attributeName="transform" type="translate" values="562 248; 572 255; 562 248" dur="3.7s" repeatCount="indefinite" />
+    </path>
+    <path d="M0 -51L11.4 -15.7L48.5 -15.7L18.5 6L30 41.2L0 19.5L-30 41.2L-18.5 6L-48.5 -15.7L-11.4 -15.7Z" transform="translate(286 34)">
+      <animateTransform attributeName="transform" type="translate" values="286 34; 296 44; 286 34" dur="4.4s" repeatCount="indefinite" />
+    </path>
+    <path d="M0 -61.3L13.8 -19L58.3 -19L22.3 7.2L36.1 49.6L0 23.4L-36.1 49.6L-22.3 7.2L-58.3 -19L-13.8 -19Z" transform="translate(2 486)">
+      <animateTransform attributeName="transform" type="translate" values="2 486; 12 476; 2 486" dur="5.2s" repeatCount="indefinite" />
+    </path>
+  </g>
+</svg>
