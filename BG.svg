@@ -1,9 +1,9 @@
 <svg viewBox="0 0 1800 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-  <!-- 배경 좌우 분리 -->
-  <rect width="900" height="200" fill="#B3E5FC" />
-  <rect x="900" width="900" height="200" fill="#0A0F3C" />
+  <!-- 배경 -->
+  <rect width="900" height="200" fill="#B3E5FC" /> <!-- 낮 -->
+  <rect x="900" width="900" height="200" fill="#0A0F3C" /> <!-- 밤 -->
 
-  <!-- 낮 테마 구름 -->
+  <!-- 낮 구름 -->
   <g fill="#fff" opacity="0.9">
     <path d="M0 150 C100 180, 150 100, 250 130 C300 80, 400 80, 450 120 L450 200 L0 200 Z" />
     <path d="M450 150 C550 180, 600 100, 700 130 C750 80, 850 80, 900 120 L900 200 L450 200 Z" />
@@ -16,7 +16,7 @@
       repeatCount="indefinite" />
   </g>
 
-  <!-- 밤 테마 구름 -->
+  <!-- 밤 구름 -->
   <g fill="#dddfff" opacity="0.7" transform="translate(900 0)">
     <path d="M0 150 C100 180, 150 100, 250 130 C300 80, 400 80, 450 120 L450 200 L0 200 Z" />
     <path d="M450 150 C550 180, 600 100, 700 130 C750 80, 850 80, 900 120 L900 200 L450 200 Z" />
@@ -29,7 +29,7 @@
       repeatCount="indefinite" />
   </g>
 
-  <!-- 밤 하늘 별들 -->
+  <!-- 밤 별 -->
   <g fill="#fff" opacity="0.8" transform="translate(900 0)">
     <circle cx="100" cy="50" r="1.5">
       <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" />
@@ -42,9 +42,9 @@
     </circle>
   </g>
 
-  <!-- 새 (낮/밤 공통) -->
+  <!-- 새 -->
   <g stroke="#333" stroke-width="1" fill="none" >
-    <path d="M0 0 L5 -5 L10 0">
+    <path d="M0 0 L5 -5 L10 0" >
       <animateTransform attributeName="transform" type="translate" values="-50 80; 1850 80" dur="25s" repeatCount="indefinite" />
       <animateTransform attributeName="transform" type="scale" values="1 1; 1.2 0.8; 1 1" dur="0.5s" repeatCount="indefinite" additive="sum" />
     </path>
