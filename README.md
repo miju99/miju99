@@ -1,6 +1,8 @@
 <div align="center">
 
-## [![Typing SVG](https://readme-typing-svg.demolab.com?font=Delius+Unicase&size=35&letterSpacing=&pause=1000&color=0074F7&width=600&height=60&lines=Hi+there+%F0%9F%91%8B+I'm+Beginner)](https://git.io/typing-svg)
+## Hi there👋 I'm Beginner
+
+# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Delius+Unicase&size=40&pause=1000&color=F39C12&background=FFFFFF00&width=630&height=60&lines=Welcom+to+Miju's+Github!)](https://git.io/typing-svg)
 
 ### ✏ Currently Learning ✏ <br>
 <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" />
